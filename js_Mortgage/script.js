@@ -33,38 +33,36 @@ function preCheck()
         errLength.innerText = "";
         errRate.innerText = "";
 
-        if(loan == 0 || loan == NaN || loan == "")
+        if(!loan || loan < 0)
         {
             
             let loanNode = document.createTextNode("Needs a value");
-
             errLoan.appendChild(loanNode);
             clear = false;
         }
         
-        if(loanLength == 0 || loanLength == NaN || loanLength == "")
+        if(!loanLength || loanLength < 0)
         {
             let lengthNode = document.createTextNode("Needs a value");
-
             errLength.appendChild(lengthNode);
             clear = false;
         }
             
-            if(rate == 0 || rate == NaN || rate == "")
-            {
-                let rateNode = document.createTextNode("Needs a value");
+        if(!rate || rate < 0)
+        {
+            let rateNode = document.createTextNode("Needs a value");
+            errRate.appendChild(rateNode);
+            clear = false;
+        }
 
-                errRate.appendChild(rateNode);
-                clear = false;
-            }
-            if(clear == true)
-            {
-                var total = calculateMonthly(loan, loanLength, rate);
-                total = total.toFixed(2);
-                let result = document.getElementById('Result');
-                result.innerText = "Your monthly payment would be $" + total + "."
+        if(clear == true)
+        {
+            var total = calculateMonthly(loan, loanLength, rate);
+            total = total.toFixed(2);
+            let result = document.getElementById('Result');
+            result.innerText = "Your monthly payment would be $" + total + "."
 
-            }
+        }
             
         
     }
