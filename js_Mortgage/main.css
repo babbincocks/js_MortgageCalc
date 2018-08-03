@@ -1,0 +1,54 @@
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 11pt;
+    margin: 2px;
+    margin-left: 5px;
+}
+
+#calc
+{
+    background: #E0D3DE;
+    border: 1px;
+    border-style: solid;
+    width: 26%;
+    background-size: inherit;
+    margin:5px;
+    margin-top: 16px;
+}
+
+input
+{
+    margin-left: 5px;
+}
+
+#btnSubmit
+{
+    margin-bottom: 16px;
+    margin-left: 79px;
+
+}
+
+#top
+{
+    margin-top: 16px;
+}
+
+#main{
+    background: linear-gradient(to bottom, #abdafc, #acacde, #c490d1, #441151) no-repeat center fixed;
+    background-size: inherit;
+}
+
+#loanWarn
+{
+    color: #FF101F;
+}
+
+#timeWarn
+{
+    color: #FF101F;
+}
+
+#intWarn
+{
+    color: #FF101F;
+}
